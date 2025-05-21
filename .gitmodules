@@ -1,0 +1,6 @@
+[submodule "R2_CaracterizacionPeliculaDelgadaAluminio"]
+	path = R2_CaracterizacionPeliculaDelgadaAluminio
+	url = ./R2_CaracterizacionPeliculaDelgadaAluminio
+[submodule "R3_EspectroscopiaDeEmisionOpticaDePlasmaPorHiPIMSDeBlancoDeBN"]
+	path = R3_EspectroscopiaDeEmisionOpticaDePlasmaPorHiPIMSDeBlancoDeBN
+	url = ./R3_EspectroscopiaDeEmisionOpticaDePlasmaPorHiPIMSDeBlancoDeBN
