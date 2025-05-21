@@ -1,0 +1,14 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'build/main.blg'
+[56] biber:340> INFO - === Sat May 17, 2025, 19:08:13
+[69] Biber.pm:420> INFO - Reading 'build/main.bcf'
+[115] Biber.pm:991> INFO - Using all citekeys in bib section 0
+[123] Biber.pm:4463> INFO - Processing section 0
+[133] Biber.pm:4654> INFO - Looking for bibtex file 'CaracterizacionPeliculaDelgadaAluminioHiPIMSTribologia.bib' for section 0
+[136] bibtex.pm:1713> INFO - LaTeX decoding ...
+[156] bibtex.pm:1519> INFO - Found BibTeX data source 'CaracterizacionPeliculaDelgadaAluminioHiPIMSTribologia.bib'
+[295] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[295] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[295] Biber.pm:4283> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[309] bbl.pm:676> INFO - Writing 'build/main.bbl' with encoding 'UTF-8'
+[317] bbl.pm:779> INFO - Output to build/main.bbl
