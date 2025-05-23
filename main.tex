@@ -36,6 +36,7 @@
 \usepackage{makecell}%To keep spacing of text in tables
 \setcellgapes{2pt}%parameter for the spacing in tables
 \usepackage{afterpage}
+\usepackage{subcaption}
 \usepackage[
   sorting=none,
   backend=biber,
@@ -86,6 +87,9 @@
 \usepackage{tikz}
 \usetikzlibrary{arrows}
 %\usepackage[spanish,es-noquoting]{babel}
+
+\DeclareSIUnit{\Torr}{Torr}
+\DeclareSIUnit{\mTorr}{mTorr}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%% INICIO DEL DOCUMENTO %%%%%
@@ -170,15 +174,56 @@ Para la medición del espesor de las películas se requirió colocar una gota de
 
 \subsection{Prueba de \emph{scratch}}
 
-La prueba de \emph{scratch} se realizó usando el tester mecánico NANOVEA CB500 en la película depositada en el portaobjetos de vidrio siguiendo la norma ASTM-1624. Esta se prueba se llevó acabo a una temperatura \qty{22.7}{\degreeCelsius} utilizando un contracuerpo de hierro con cromo de \qty{1}{\mm} aplicando una carga progresiva de \qty{0.01}{\N} hasta \qty{2.5}{\N} y de \qty{0.01}{\N} hasta \qty{1}{\N} con una velocidad constante de \qty{1}{\mm\per\min} en una distancia de \qty{5}{\mm}.
+La prueba de \emph{scratch} se realizó usando el tester mecánico NANOVEA CB500 para la película depositada en el portaobjetos de vidrio siguiendo la norma ASTM-1624\cite{internationalStandardTestMethod}, Esta se prueba se llevó acabo a una temperatura \qty{22.7}{\degreeCelsius} utilizando un contracuerpo de hierro con cromo de \qty{1}{\mm} aplicando una carga progresiva de \qty{0.01}{\N} hasta \qty{2.5}{\N} y de \qty{0.01}{\N} hasta \qty{1}{\N} con una velocidad constante de \qty{1}{\mm\per\min} en una distancia de \qty{5}{\mm}.
 
 \subsection{SEM}
 
-Para la obtención de las imágenes SEM de la sección transversal y la superficie de la película depositaa en \ch{Si} se usó el microscopio JEOL JSM-6010LA, a una resolucion de 20,000 x y 10,000 x respectivamente.
+El análisis de la morfología y el tipo de creciminento de la película delgada se realizó para la película depositada en el sustrato de \ch{Si} mediante un microscopio electrónico de barrido (SEM) de la marca JEOL, modelo JSM-6010LA. La imagen de la sección transversal se obtuvo utilizando usando SE a una resolución de \num{10000} y \num{20000}, y con BE a una resolución de \num{20000}. Mientras que la imagen para determinar el tipo de crecimiento se obtuvo usando solamente SE a resoluciones de \num{10000} y \num{25000}.
 
 \section{Resultados y análisis}
 
-El grosor de la película al ser medida desde el perfilómetro óptico resulto no ser constante, este variaba significativamente en un promedio entre $250 nm$ a $300 nm$, esto dificulto tener una fiablilidad al realizar la prueba de scratch.
+A partir de las distintas mediciones realizadas con el perfilómetro óptico a lo largo del crátes, se determinó que el espesor de la película varía entre \qty{250}{\nm} y \qty{300}{\nm}. Esta variación es un indicio de que la pellícula depositada es amorfa y, aunque el depósito fue exitoso, sugiere que aún es necesario ajustar los parámetros utilizados durante el proceso: una presión base de \qty{3e-6}{\Torr}, presión de trabajo de \qty{10.7}{\mTorr}, frecuencia de \qty{90}{\Hz} (90 pulsos por segundo) durante \qty{25}{\min}, potencia de \qty{25}{\W}, voltaje de \qty{550}{\V} y corriente de \qty{14}{\mA}. En la \cref{fig:OP-grosor} se osbserva el cráter generado por la presencia del pegamento, donde se observa que el espesor de la película es de aproximadamente \qty{280}{\nm}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{OP-grosor}
+	\caption{Medición del espesor de la película de \ch{Al} depositada en el portaobjetos de vidrio.}
+	\label{fig:OP-grosor}
+\end{figure}
+
+Por otro lado, es necesario mencionar que la resolución del SEM utilizado para la obtención de las imágenes de la sección transversal y la superficie de la película de \ch{Al} depositada en el sustrato de \ch{Si} no fue la adecuada para observar la morfología y el tipo de crecimiento de la película. En la \cref{fig:SEM-trans} se observa la imagen de la sección transversal de la película, donde se puede observar que el cremiento es irregular y no uniforme, lo que sugiere que la película es amorfa. Mientras que en la \cref{fig:SEM-superficie} se observa la imagen de la superficie de la película, donde se puede observar que el crecimineto es granular.
+
+\begin{figure*}[htp]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Al-transv-0004.png}
+		\caption{Imagen de la sección transversal de la película de \ch{Al} depositada en el sustrato de \ch{Si}, con BSE a la izquierda y SE a la derecha.}
+	\end{subfigure}%
+	~
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Al-transv-0008.png}
+		\caption{Imagen de la sección transversal de la película de \ch{Al} observada con SE y en la que está presente el sustrato de \ch{Si}.}
+	\end{subfigure}
+	\caption{Imágenes de la sección transversal de la película de \ch{Al} depositada en el sustrato de \ch{Si}.}
+	\label{fig:SEM-trans}
+\end{figure*}
+
+\begin{figure*}[htp]
+	\centering
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Al-sup-0001.png}
+	\end{subfigure}%
+	~
+	\begin{subfigure}[b]{0.45\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{Al-sup-0002.png}
+	\end{subfigure}
+	\caption{Imágenes de la superficie de la película en la que se observa que el cremiento es granular.}
+	\label{fig:SEM-superficie}
+\end{figure*}
 
 Al ver la pelicula con una resolucion mayor por medio de un microscopio la pelicula presento zonas irreguales donde no habia recubrimiento, sin embargo se procedio con la prueba, la fractura expuesta fue del tipo adhesiva, el material se abrio sobre la pelicula y parte del mismo quedo sobre el contracuerpo de 1mm de diametro, utilizamos este mismo contracuerpo para realizar la segunda prueba de rayado, en este caso antes de romperse y adherirse al contracuepro este dio saltos sobre la superfie, dejando el coeficiente de friccion con picos significativos
 
