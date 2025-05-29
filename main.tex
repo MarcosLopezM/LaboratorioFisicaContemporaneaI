@@ -229,21 +229,33 @@ Otra prueba que nos puede ayudar a determinar la calidad de la película es la p
 
 Sin embargo, las imágenes obtenidas durante la prueba de \emph{scratch} no son suficientes para determinar la calidad de la película y analizar lo qué sucede a lo largo de la trayectoria de rayado. Por lo que se realizó un análisis de la fuerza de fricción en conjunto con las imágenes obtenidas de analizar la trayectoria de rayado en el perfilómetro óptico.
 
-Por un lado, para la primera prueba de rayado, se observa que para los primeros \qty{0.5}{\nm}
+Por un lado, para la primera prueba de rayado, se observa que para el primer \qty{1}{\mm} la deformación que experimenta la película es plástica, ya que la fuerza de fricción no es la suficiente para desprender la película del sustrato. Sin embargo, que la película sea amorfa provoca cambios en la fuerza de fricción, lo que se traduce en picos significativo en la gráfica que se muetra de color rojo en \cref{fig:scratch-test-1}. En el resto de la trayectoria, la película se ha desprendido completamente del sustrato, lo cual provoca que la fuerza de fricción sea constante.
 
 \begin{figure*}[htb]
 	\centering
-	\includegraphics[width=\linewidth]{grafica-scratch_test_1}
+	% \includegraphics[width=\linewidth]{grafica-scratch_test_1}
+	\includegraphics{example-image-a}
 	\caption{Trayectoria de rayada para la prueba de \qty{0.1}{\N} hasta \qty{2.5}{\N}.}
 	\label{fig:scratch-test-1}
 \end{figure*}%
-\vspace{0.5cm}
+
+Para la segunda prueba de rayado, observamo el mimsmo tipo de comportamiento, en donde la película adherida al contracuerpo provoca un tipo de falla que no se esperaría para este tipo de película. En este caso, podríamos creer que la película presenta una falla del tipo Chevron, pero no es más que la presencia de impurezas debidas a la cámara de depósito. Nuevamente observamos un comportamiento casi constante de la fuerza de fricción (ver \cref{fig:scratch-test-2}), que nos indica que la película se ha desprendido completamente del sustrato.
+
 \begin{figure*}[htb]
 	\centering
-	\includegraphics[width=\linewidth]{grafica-scratch_test_2}
+	% \includegraphics[width=\linewidth]{grafica-scratch_test_2}
+	\includegraphics{example-image-a}
 	\caption{Trayectoria de rayada para la prueba de \qty{0.01}{\N} hasta \qty{1}{\N}.}
 	\label{fig:scratch-test-2}
 \end{figure*}
+
+Estas deducciones del comportamiento observado durante la prueba de rayado se dedujó de las imágenes obtenidas del perfilómetro óptico, donde se observa que la parte de la trayectoria de color azul es la visualización del portaobjetos de vidrio, mientras que este mismo comporatmiento se observa de color verde en ciertas partes, pero representa lo mismo. Esto no es más que la consecuencia de la variación del espesor de la película.
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[width=\linewidth]{OP-prueba_1-3D-path_final.jpg}
+	\caption{Trayectoria de las dos pruebas de rayado en la que se observa el desprendimiento total de la película de \ch{Al} del sustrato de vidrio. De color verde ser observa la trayectoria debida a la primera prueba de rayado, mientras que de color azul se observa la trayectoria de la segunda prueba.}
+\end{figure}
 
 \section{Conclusiones}
 
@@ -252,7 +264,7 @@ Las películas delgadas de \ch{Al} depositadas por HiPIMS presentan un espesor p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%    Bibliografia   %%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \newpage
+\pagebreak
 \nocite{*}
 \printbibliography
 %\section{Apéndices}
