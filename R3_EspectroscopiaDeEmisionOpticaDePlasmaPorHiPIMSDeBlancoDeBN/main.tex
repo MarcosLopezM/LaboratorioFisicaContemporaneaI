@@ -106,7 +106,7 @@
 %%% TÍTULO DEL DOCUMENTO %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Análisis de plasma de nitruro de boro (\ch{BN}) por espectrometría de emisión óptica obtenido por RF Magnetron Sputtering}
+\title{Análisis de plasma de nitruro de boro \ch{BN} por espectrometría de emisión óptica obtenido por RF Magnetron Sputtering}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%% AUTORES %%%%%%%%%
@@ -120,12 +120,11 @@
 	\begin{@twocolumnfalse}
 		\maketitle
 		\begin{abstract}
-			En este trabajo se estudió la composición del plasma emitido por un depósito de boro por el método RF (\emph{magnetron sputtering}), analizando el espectro de emisión a una altura de \qty{5}{\cm} por encima del blanco y en el centro del mismo, por intervalos de tiempo para concretar una base de datos para su posterior análisis, donde estudiando estas franjas de emisión, se obtuvieron elementos tales como nitrógeno, argón y boro presentes en el depósito de la cámara de vacío.
-
+			En este trabajo se utilizó la técnica de espectrometría de emisión óptica (OES) para analizar la composición del plasma generado durante el depósito de una película de nitruro de boro \ch{BN} mediante la técnica de \emph{Radio Frequency Magnetron Sputtering}. El espectro de emisión se registró a una altura de \qty{5}{\cm} sobre el blanco, en su región central, a intervalos regulares de tiempo, con el objetivo de construir una base de datos para su análisis posterior. Con base en el conocimiento previo de los elementos esperados en el plasma, las líneas de emisión observadas se compararon con la base de datos del NIST, lo que permitió identificar la presencia de nitrógeno, argón y boro durante el proceso de deposición. 
 		\end{abstract}
 
 		\begin{IEEEkeywords}
-			Espectometria, RF magnetron sputtering, Plasma
+			Espectometría, RF magnetron sputtering, plasma
 		\end{IEEEkeywords}
 	\end{@twocolumnfalse}
 	\vspace{1cm}
@@ -144,21 +143,23 @@ Las películas delgadas son capas muy finas de material, con espesores que van d
 
 En la historia moderna de la física, se han creado diversos métodos para construir estas estructuras que conocemos como películas delgadas, por mencionar algunas tenemos electrodeposición (\emph{electroplating}), la evaporación, la pulverización catódica (\emph{sputter deposition}), la deposición química de vapor  (CVD, por sus siglas en inglés) y combinaciones de estas. Sin embargo, la técnica utilizada en ese trabajo es la llamada RF.
 
-Sputtering RF \cite{mastertesis2017}: La pulverización catódica por radio frecuencia (RF) ocurre a frecuencias superiores a 50 kHz. En esta, los iones no alcanzan suficiente movilidad como para establecer una descarga similar a la del sputtering DC y los electrones tienen suficiente energía como para causar colisiones ionizantes en el espacio entre los electrodos, lo que produce el plasma en el espacio entre los electrodos. Una de las mayores ventajas de usar sputtering RF es que se pueden utilizar blancos no conductores, pues se aplica un potencial oscilante en el blanco, lo que hace que en cada medio ciclo se puedan acelerar los iones del plasma hacia la superficie con suficiente energía como para producir la pulverización catódica y en el otro medio ciclo, los electrones del plasma alcanzan la superficie, impidiendo cualquier tipo de acumulación de carga. Las frecuencias RF usadas para la deposición por sputtering están en el rango de 0.5 y 30 MHz siendo 13.56 MHz la frecuencia más usada comercialmente. Una de las mayores desventajas de la pulverización catódica de materiales semiconductores o aislantes es que la mayoría de estos materiales tienen baja conductividad térmica, grandes coeficientes de expansión térmica y son usualmente materiales frágiles, y este tipo de propiedades son indeseables en un proceso como el RF sputtering donde la mayoría de la energía de bombardeo produce calor y se generan grandes gradientes de temperatura en el blanco, lo que puede producir su fractura.
+La pulverización catódica por radio frecuencia (RF)\cite{mastertesis2017} ocurre a frecuencias superiores a \qty{50}{\kHz}. En esta, los iones no alcanzan suficiente movilidad como para establecer una descarga, similar a la del sputtering DC, pero los electrones tienen suficiente energía como para causar colisiones ionizantes en el espacio entre los electrodos, lo que produce el plasma en el espacio entre los electrodos. Una de las mayores ventajas de usar \emph{sputtering RF} es que se pueden utilizar blancos no conductores, pues se aplica un potencial oscilante en el blanco, lo que hace que en cada medio ciclo se puedan acelerar los iones del plasma hacia la superficie con suficiente energía como para producir la pulverización catódica y en el otro medio ciclo, los electrones del plasma alcanzan la superficie, impidiendo cualquier tipo de acumulación de carga. Las frecuencias RF usadas para la deposición por \emph{sputtering} están en el rango de \qtylist[list-units=single]{0.5;30}{\MHz}, siendo \qty{13.56}{\MHz} la frecuencia más usada comercialmente. Una de las mayores desventajas de la pulverización catódica de materiales semiconductores o aislantes es que la mayoría de estos materiales tienen baja conductividad térmica, grandes coeficientes de expansión térmica y son usualmente materiales frágiles, y este tipo de propiedades son indeseables en un proceso como el RF sputtering donde la mayoría de la energía de bombardeo produce calor y se generan grandes gradientes de temperatura en el blanco, lo que puede producir su fractura.
 
-En este sentido, al ser Boro un material dieléctrico, se buscó esta alternativa de RF para la fabricación de la película delgada; no obstante, el enfoque de este escrito no es acerca del producto de este método, sino del plasma generado por el mismo.
+En este sentido, al ser el nitruro de boro un material dieléctrico, se buscó esta alternativa de RF para la fabricación de la película delgada; no obstante, el enfoque de este escrito no es acerca del producto de este método, sino del plasma generado por él mismo.
 
-Los plasmas \cite{plasmaaaaa} se generan suministrando energía a un gas neutro, lo que provoca la formación de portadores de carga. Los electrones e iones se producen en fase gaseosa cuando electrones o fotones con suficiente energía colisionan con los átomos y moléculas neutros del gas de alimentación (ionización por impacto electrónico o fotoionización). Existen diversas maneras de suministrar la energía necesaria para la generación de plasma a un gas neutro en este caso a través de RF. La generación de un plasma mediante el uso de haces de partículas cargadas, especialmente electrones, y de haces de fotones se analizará al final, a través de espectrómetro de emisión óptica.
+Los plasmas \cite{plasmaaaaa} se generan suministrando energía a un gas neutro, lo que provoca la formación de portadores de carga. Los electrones e iones se producen en fase gaseosa cuando electrones o fotones con suficiente energía colisionan con los átomos y moléculas neutros del gas de alimentación (ionización por impacto electrónico o fotoionización). Existen diversas maneras de suministrar la energía necesaria para la generación de plasma a un gas neutro, en este caso a través de RF.
+
+Para estudiar la composición del plasma es necesario hacerlo a través de la espectrómetro óptica OES, 
 
 \section{Procedimiento experimental}
 
-Para el procedimiento se inició por depositar un blanco de boro de 5 pulgadas de diámetro, para posteriormente formar una película delgada sobre un sustrato en este caso de vidrio (porta objetos) con una presión de 20 $\mu Torr$ y un foto sensor, que capte las emisiones de radiación justo al frente de la cámara de vació, como se muestra en la \ref{fig:Espectometro}
+Para el procedimiento se inició por depositar un blanco de boro de 5 pulgadas de diámetro, para posteriormente formar una película delgada sobre un sustrato en este caso de vidrio (porta objetos) con una presión de 20 $\mu Torr$ y un foto sensor, que capte las emisiones de radiación justo al frente de la cámara de vació, como se muestra en la \cref{fig:Espectometro}
 
 
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.6\linewidth]{figs/buenaaaaaaaaa.jpg}
-	\caption{Espectrómetro óptico enfocado en el centro del blanco de Boro.}
+	\caption{Espectrómetro óptico enfocado en la parte central del blanco de \ch{BN}.}
 	\label{fig:Espectometro}
 \end{figure}
 
@@ -169,7 +170,7 @@ Para la medición de los espectros de emisión, este espectrómetro se colocó e
 \begin{figure}[htp]
 	\centering
 	\includegraphics[width=0.8\linewidth]{PLASMA.jpg}
-	\caption{Plasma generado por deposito de un blanco de Boro por el metodo de RF.}
+	\caption{Plasma generado durante el depósito de una película delgada de \ch{BN} mediante la técnica Rf.}
 	\label{fig:plasma}
 \end{figure}
 
@@ -179,7 +180,7 @@ Una vez obtenida una gama de mediciones de los espectros de emisión  de diferen
 
 \begin{figure}[htp]
 	\centering
-	\includegraphics[width=0.9\linewidth]{descarga.png}
+	\includegraphics[width=0.9\linewidth]{figs/longitudes de onda.png}
 	\caption{Comparacion de los espectros de emision teoricos y obtenidos en el laboratorio.}
 	\label{Graf:plasma}
 \end{figure}
