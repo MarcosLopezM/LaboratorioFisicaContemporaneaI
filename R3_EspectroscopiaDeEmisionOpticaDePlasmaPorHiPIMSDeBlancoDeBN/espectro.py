@@ -115,52 +115,63 @@ conditions = [
 ]
 # Colores y etiquetas
 colors = ["#00FF00", "#FFA500", "#00CED1", "#FF69B4"]
-labels = set()
 
 
 ### Graficamos las líneas de emisión ###
-plt.figure(figsize=(13, 7))  # Inicializamos la figura
-for i, condition in enumerate(conditions):
-    filtered_lines = lineas[condition]
+def emission_lines(ax, lineas, conditions, colors):
+    labels = set()
+    for i, condition in enumerate(conditions):
+        filtered_lines = lineas[condition]
 
-    if not filtered_lines.empty:
-        sp_num = filtered_lines["sp_num"].iloc[0]
-        ele_label = filtered_lines["ele_sp"].iloc[0]
-        ls = "--" if sp_num == 2 else "-"
-        color = colors[i % len(colors)]
+        if not filtered_lines.empty:
+            sp_num = filtered_lines["sp_num"].iloc[0]
+            ele_label = filtered_lines["ele_sp"].iloc[0]
+            ls = "--" if sp_num == 2 else "-"
+            color = colors[i % len(colors)]
 
-        # Líneas verticales
-        for wl, intens in zip(
-            filtered_lines["ritz_wl_air(nm)"],
-            filtered_lines["intens"],
-        ):
-            label = ele_label if ele_label not in labels else None
-            if label:
-                labels.add(label)
+            # Líneas verticales
+            for wl, intens in zip(
+                filtered_lines["ritz_wl_air(nm)"],
+                filtered_lines["intens"],
+            ):
+                label = ele_label if ele_label not in labels else None
+                if label:
+                    labels.add(label)
 
-            # Normalizamos la intensidad
-            intens_norm = intens / filtered_lines["intens"].max()
+                # Normalizamos la intensidad
+                intens_norm = intens / filtered_lines["intens"].max()
 
-            if sp_num == 2:  # Ionizado
-                plt.axvline(
-                    wl,
-                    0,
-                    intens_norm,
-                    # alpha=0.3,
-                    color=color,
-                    linestyle=ls,
-                    label=label,
-                )
-            else:  # Excitado
-                plt.axvline(
-                    wl,
-                    0,
-                    intens,
-                    # alpha=0.3,
-                    color=color,
-                    linestyle=ls,
-                    label=label,
-                )
+                if sp_num == 2:  # Ionizado
+                    ax.axvline(
+                        wl,
+                        0,
+                        intens_norm,
+                        # alpha=0.3,
+                        color=color,
+                        linestyle=ls,
+                        label=label,
+                    )
+                else:  # Excitado
+                    ax.axvline(
+                        wl,
+                        0,
+                        intens,
+                        # alpha=0.3,
+                        color=color,
+                        linestyle=ls,
+                        label=label,
+                    )
+
+
+fig, ax = plt.subplots(figsize=(13, 7))
+emission_lines(ax, lineas, conditions, colors)
+ax.set_xlabel("Longitud de onda (nm)")
+ax.set_ylabel("Intensidad (a.u.)")
+ax.set_title(
+    "Líneas de emisión más intensas obtenidas del NIST Atomic Spectra Database"
+)
+fig.savefig("./figs/lineas_emision.jpg", dpi=300)
+plt.close(fig)
 
 ### Graficamos los espectros ###
 ## Espectro antes de abrir el shutter
@@ -170,25 +181,28 @@ intens_bf = df_before["Mean"]
 wl_af = df_after["Wave"]
 intens_af = df_after["Mean"]
 
-plt.plot(
+fig, ax = plt.subplots(figsize=(13, 7))
+emission_lines(ax, lineas, conditions, colors)
+ax.plot(
     wl_bf,
     intens_bf,
     label="Antes de abrir el shutter",
     color="#1B9E77",
     alpha=0.8,
 )
-plt.plot(
+ax.plot(
     wl_af,
     intens_af,
     label="Después de abrir el shutter",
     color="#984EA3",
     alpha=0.8,
 )
-plt.xlabel("Longitud de onda (nm)")
-plt.ylabel("Intensidad (a.u.)")
-plt.title(
+ax.set_xlabel("Longitud de onda (nm)")
+ax.set_ylabel("Intensidad (a.u.)")
+ax.set_title(
     "Espectrometría de emisión óptica de plasma de BN generado por Rf Magnetron Sputtering"
 )
-plt.legend(loc=2, fontsize=6)
-plt.margins(y=0)
+ax.legend(loc=2, fontsize=6)
+ax.margins(y=0)
+fig.savefig("./figs/espectroBN.jpg", dpi=300)
 plt.show()
