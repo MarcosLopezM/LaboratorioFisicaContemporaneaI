@@ -170,6 +170,7 @@ ax.set_ylabel("Intensidad (a.u.)")
 ax.set_title(
     "Líneas de emisión más intensas obtenidas del NIST Atomic Spectra Database"
 )
+ax.legend(loc=2, fontsize=6)
 fig.savefig("./figs/lineas_emision.jpg", dpi=300)
 plt.close(fig)
 
